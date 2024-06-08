@@ -6,4 +6,3 @@ const carreraController = require('../controllers/carreraController');
 router.get('/mostrarCarrera', carreraController.getData);
 
 module.exports = router;
-

@@ -1,5 +1,6 @@
 // app.js
 const express = require('express');
+const path = require('path');
 const app = express();
 const port = 3000;
 
@@ -7,8 +8,8 @@ const port = 3000;
 app.use(express.json());
 
 // Importar rutas
-const carreraRoutes = require('./routes/carreraRoutes'); // Asegúrate de que la ruta y el nombre del archivo sean correctos
-const sesionesRoutes = require('./routes/sesionesRutas'); // Asegúrate de que la ruta y el nombre del archivo sean correctos
+const carreraRoutes = require(path.join(__dirname, 'routes', 'CarreraRoutes'));
+const sesionesRoutes = require(path.join(__dirname, 'routes', 'sesionesRutas'));
 
 // Usar rutas
 app.use('/carrera', carreraRoutes);
