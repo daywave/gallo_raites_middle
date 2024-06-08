@@ -1,6 +1,5 @@
 // app.js
 const express = require('express');
-const db = require('./database');
 const app = express();
 const port = 3000;
 
@@ -8,11 +7,15 @@ const port = 3000;
 app.use(express.json());
 
 // Importar rutas
-const dataRoutes = require('./routes/carreraRuta');
-app.use('/carrera', dataRoutes);
+const carreraRoutes = require('./routes/CarreraRoutes'); // Asegúrate de que la ruta y el nombre del archivo sean correctos
+const sesionesRoutes = require('./routes/sesionesRutas'); // Asegúrate de que la ruta y el nombre del archivo sean correctos
+
+// Usar rutas
+app.use('/carrera', carreraRoutes);
+app.use('/sesiones', sesionesRoutes);
 
 app.get('/', (req, res) => {
-  res.send('Hello desde el middleware! Bienvenido');
+  res.send('Hello, world!');
 });
 
 app.listen(port, () => {
