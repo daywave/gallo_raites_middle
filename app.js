@@ -12,7 +12,7 @@ const dataRoutes = require('./routes/carreraRuta');
 app.use('/carrera', dataRoutes);
 
 app.get('/', (req, res) => {
-  res.send('Hello desde el middleware!');
+  res.send('Hello desde el middleware! Bienvenido');
 });
 
 app.listen(port, () => {
