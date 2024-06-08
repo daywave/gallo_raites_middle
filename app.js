@@ -7,7 +7,7 @@ const port = 3000;
 app.use(express.json());
 
 // Importar rutas
-const carreraRoutes = require('./routes/CarreraRoutes'); // Asegúrate de que la ruta y el nombre del archivo sean correctos
+const carreraRoutes = require('./routes/carreraRoutes'); // Asegúrate de que la ruta y el nombre del archivo sean correctos
 const sesionesRoutes = require('./routes/sesionesRutas'); // Asegúrate de que la ruta y el nombre del archivo sean correctos
 
 // Usar rutas
