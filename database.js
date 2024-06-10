@@ -2,9 +2,9 @@
 const mysql = require('mysql2');
 
 const db = mysql.createConnection({
-  host: '192.168.43.141',
-  user: 'replicadb',
-  password: 'Replica-replica1!',
+  host: 'localhost',
+  user: 'root',
+  password: 'Master-master1!',
   database: 'replicadb'
 });
 
