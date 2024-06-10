@@ -1,11 +1,13 @@
 // app.js
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const app = express();
 const port = 3000;
 
 // Middleware para parsear JSON
 app.use(express.json());
+app.use(cors());
 
 // Importar rutas
 const carreraRoutes = require(path.join(__dirname, 'routes', 'carreraRoutes'));
