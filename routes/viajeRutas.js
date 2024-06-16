@@ -1,6 +1,9 @@
 // routes/sesionesRutas.js
 const express = require('express');
 const router = express.Router();
-const viajesController = require('../controllers/viajesController');
+const viajeController = require('../controllers/viajeController');
 
-router.get('/mostrarViajes', viajesController);
+router.get('/mostrarViajes', viajeController.getData);
+
+
+module.exports = router;
